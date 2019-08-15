@@ -5,6 +5,9 @@
   --captionBlack: #71706e;
 }
 
+html, body {
+  height: 100%;
+}
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -18,6 +21,31 @@ body {
 
 .brand-logo {
   height: 4rem;
+}
+
+.footer {
+  bottom: 0;
+  background-color: var(--footerGray);
+  color: #fff;
+  padding: 1rem;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.input-group input {
+  height: 2rem;
+  width: 10rem;
+  margin-right: 0.5rem;
+}
+
+.list-unstyled li a {
+  font-size: 0.8rem;
+}
+
+.col-md-3 {
+  text-transform: uppercase;
 }
 
 
