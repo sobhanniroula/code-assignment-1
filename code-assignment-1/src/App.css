@@ -5,9 +5,10 @@
   --captionBlack: #71706e;
 }
 
-html, body {
+html{
   height: 100%;
 }
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -28,6 +29,7 @@ body {
   background-color: var(--footerGray);
   color: #fff;
   padding: 1rem;
+  width: 100%;
 }
 
 .footer a {
@@ -50,9 +52,26 @@ body {
 
 
 
-
+/* for small screens  */
 @media all and (max-width: 480px) {
   .brand-logo {
     height: 2rem;
+  }
+
+  .footer {
+    margin-bottom: 0;
+  }
+}
+
+/* for big screens  */
+@media all and (min-width: 960px) {
+  html{
+    position: relative;
+    min-height: 100%;
+  }
+
+  .footer {
+    padding: 1rem 1rem 5rem 1rem;
+    position: absolute;
   }
 }
