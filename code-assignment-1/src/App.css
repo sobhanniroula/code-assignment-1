@@ -3,6 +3,7 @@
   --footerGray: #b6c2c9;
   --iconGray: #4c565f;
   --captionBlack: #71706e;
+  --redColor: #f00;
 }
 
 html{
@@ -13,6 +14,8 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+
+/* top bar section  */
 #top-bar {
   background-color: var(--mainGreen);
   height: 1.4rem;
@@ -20,10 +23,43 @@ body {
   border: none;
 }
 
+
+/* Navbar section */
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
 .brand-logo {
   height: 4rem;
 }
 
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bottom .nav-item {
+  color: var(--iconGray) !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.nav-bottom .nav-sale {
+  color: var(--redColor) !important;
+}
+
+.ul-bottom-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Product list section  */
+
+
+/* footer section  */
 .footer {
   bottom: 0;
   background-color: var(--footerGray);
@@ -50,7 +86,13 @@ body {
   text-transform: uppercase;
 }
 
+.col-md-3 h5 {
+  font-weight: bold;
+}
 
+
+
+/* All media queries */
 
 /* for small screens  */
 @media all and (max-width: 480px) {
@@ -61,7 +103,17 @@ body {
   .footer {
     margin-bottom: 0;
   }
+
+  .footer input, .footer button {
+    width: 100%;
+  }
+
+  .footer button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
 }
+
 
 /* for big screens  */
 @media all and (min-width: 960px) {
@@ -73,5 +125,9 @@ body {
   .footer {
     padding: 1rem 1rem 5rem 1rem;
     position: absolute;
+  }
+
+  .footer button {
+    margin-right: -5rem;
   }
 }

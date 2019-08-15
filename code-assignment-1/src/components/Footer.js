@@ -27,11 +27,9 @@ export default class Footer extends Component {
                         <div className="col-md-3">
                             <h5>Newsletter Subscribe</h5>
                             <div className="input-group">
-                                <input type="email" className="form-control" placeholder="Enter your email address" />
-                                <span className="input-group-btn">
+                                    <input type="email" className="form-control" placeholder="Enter your email address" />
+
                                 <button className="btn btn-success" type="submit">Subscribe</button>
-                                </span>
-                            
 	                        </div>
                         </div>
                     </div>
