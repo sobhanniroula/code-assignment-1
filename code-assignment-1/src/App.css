@@ -1,4 +1,5 @@
 :root {
+  --mainWhite: #fff;
   --mainGreen: #3bc0c3;
   --footerGray: #b6c2c9;
   --iconGray: #4c565f;
@@ -63,31 +64,62 @@ body {
 .footer {
   bottom: 0;
   background-color: var(--footerGray);
-  color: #fff;
+  color:var(--mainWhite);
   padding: 1rem;
   width: 100%;
 }
 
 .footer a {
-  color: #fff;
+  color: var(--mainWhite);
 }
 
 .input-group input {
   height: 2rem;
   width: 10rem;
-  margin-right: 0.5rem;
 }
 
 .list-unstyled li a {
   font-size: 0.8rem;
 }
 
-.col-md-3 {
+.col-md-3, .col-md-6 {
   text-transform: uppercase;
 }
 
-.col-md-3 h5 {
+.col-md-3 h5, .col-md-6 h5 {
   font-weight: bold;
+}
+
+.subscribe-text {
+  text-align: left;
+}
+
+.subs-input {
+  position: relative;
+  padding-left: 2.5rem;
+  font-size: 0.8rem;
+  color: var(--footerGray);
+  border: none;
+  border-radius: 0.2rem !important;
+}
+
+.subs-icon {
+  position: absolute;
+  font-size: 1.2rem;
+  color: var(--iconGray);
+  z-index: 100;
+  top: 0.4rem;
+  left: -6.2rem;
+}
+
+.btn-subscribe {
+  background-color: var(--mainGreen);
+  color: var(--mainWhite);
+  text-transform: uppercase;
+  height: 2.05rem;
+  line-height: 1rem;
+  font-weight: 500;
+  border: none;
 }
 
 
@@ -109,8 +141,16 @@ body {
   }
 
   .footer button {
-    width: 100%;
     margin-top: 0.5rem;
+  }
+
+  .input-group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .subs-icon {
+    left: 0.5rem;
   }
 }
 
@@ -128,6 +168,19 @@ body {
   }
 
   .footer button {
-    margin-right: -5rem;
+    margin-right: 0.5rem;
+  }
+
+  .input-group input {
+    margin-left: -7rem;
+    margin-right: 0.5rem;
+  }
+
+  .subscribe-text {
+    margin-left: -7rem;
+  }
+
+  .btn-subscribe {
+    font-size: 0.8rem;
   }
 }

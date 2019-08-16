@@ -24,12 +24,12 @@ export default class Footer extends Component {
                                 <li><a href="/">Contact Us</a></li>
                             </ul>
                         </div>
-                        <div className="col-md-3">
-                            <h5>Newsletter Subscribe</h5>
+                        <div className="col-md-3 ml-auto">
+                            <h5 className="subscribe-text">Newsletter Subscribe</h5>
                             <div className="input-group">
-                                    <input type="email" className="form-control" placeholder="Enter your email address" />
-
-                                <button className="btn btn-success" type="submit">Subscribe</button>
+                                <i class="far fa-envelope subs-icon"></i>
+                                <input type="email" className="form-control subs-input" placeholder="Enter your email address" />
+                                <button className="btn btn-subscribe" type="submit">Subscribe</button>
 	                        </div>
                         </div>
                     </div>
