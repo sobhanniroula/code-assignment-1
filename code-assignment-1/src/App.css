@@ -5,6 +5,7 @@
   --iconGray: #4c565f;
   --captionBlack: #71706e;
   --redColor: #f00;
+  --fullBlack: #000;
 }
 
 html{
@@ -31,13 +32,13 @@ body {
   flex-direction: column;
 }
 
-.brand-logo {
-  height: 4rem;
-}
-
-.navbar-top {
+.nav-top {
   display: flex;
   justify-content: space-between;
+}
+
+.nav-bottom {
+
 }
 
 .nav-bottom .nav-item {
@@ -51,9 +52,50 @@ body {
   color: var(--redColor) !important;
 }
 
+.brand-logo {
+  height: 4rem;
+}
+
 .ul-bottom-nav {
   display: flex;
   justify-content: space-between;
+}
+
+.black-bar {
+  height: 0.4rem;
+  width: 103%;
+  background-color: var(--fullBlack);
+ 
+}
+
+
+/* cart section  */
+.cart {
+  display: flex;
+  align-items: center;
+  border: 0.05rem solid var(--footerGray);
+  border-radius: 0.2rem;
+  top: 1rem;
+}
+
+
+/* Vaimo Ad Section  */
+.vaimo-ad {
+  margin-top: 1rem;
+}
+
+.vaimo-ad-desc h1, .vaimo-ad-desc h3, .vaimo-ad-desc h5 {
+  font-weight: bolder;
+  letter-spacing: 0.05rem;
+}
+
+.vaimo-ad-desc h1, .vaimo-ad-desc h5  {
+  text-transform: none;
+}
+
+.get-ready-img {
+  width: 100%;
+  height: auto;
 }
 
 
@@ -124,6 +166,7 @@ body {
 
 
 
+
 /* All media queries */
 
 /* for small screens  */
@@ -152,11 +195,18 @@ body {
   .subs-icon {
     left: 0.5rem;
   }
+
+  .cart {
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--footerGray);
+    justify-content: center;
+  }
 }
 
 
 /* for big screens  */
-@media all and (min-width: 960px) {
+@media all and (min-width: 940px) {
   html{
     position: relative;
     min-height: 100%;

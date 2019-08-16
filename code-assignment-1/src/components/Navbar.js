@@ -7,14 +7,19 @@ export default class Navbar extends Component {
             <React.Fragment>
                 <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-light">
+
                         <div className="nav-top">
-                            <a className="navbar-brand" href="/">
-                                <img src="/img/logo.png" alt="Brand" className="brand-logo" />
-                            </a>
-                            <Cart />
-                            <button className="navbar-toggler ml-auto hidden-sm-up float-xs-right bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                                <span className="navbar-toggler-icon"></span>
-                            </button>
+                            <div className="nav-top-logo">
+                                <a className="navbar-brand" href="/">
+                                    <img src="/img/logo.png" alt="Brand" className="brand-logo" />
+                                </a>
+                            </div>
+                            <div className="nav-top-cart">
+                                <Cart />
+                                <button className="navbar-toggler ml-auto hidden-sm-up float-xs-right bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span className="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
                         </div>
                         
                         <div className="collapse navbar-collapse nav-bottom" id="navbarTogglerDemo01">
@@ -41,11 +46,13 @@ export default class Navbar extends Component {
 
                             <ul className="navbar-nav">
                             <li className="nav-item">
-                                    <a className="nav-link" href="/">Account</a>
+                                    <a className="nav-link" href="/">My Account</a>
                                 </li>
                             </ul>
                             
                         </div>
+
+                        <div className="black-bar"></div>
                     </nav>
                 </div>
                 

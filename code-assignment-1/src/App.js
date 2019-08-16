@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import TopBar from './components/TopBar';
 import ProductList from './components/ProductList';
+import VaimoAd from './components/VaimoAd';
 
 
 export default class App extends Component {
@@ -13,6 +14,7 @@ export default class App extends Component {
       <React.Fragment>
         <TopBar />
         <Navbar />
+        <VaimoAd />
         <ProductList />       
         <Footer />
       </React.Fragment>
