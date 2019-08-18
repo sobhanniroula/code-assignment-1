@@ -11,7 +11,6 @@ const cart = {
             "price":"405.00",
             "qty":2,
             "imgSrc":"img\/products\/scarf.jpg"
-        }
     ]
 }
 

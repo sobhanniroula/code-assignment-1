@@ -40,7 +40,13 @@ class ProductServiceProvider extends ServiceProvider
             ]
         ];
 
+        usort($products, [$this, "productComparator"]);
+
         view()->share('products', $products);
+    }
+
+    private function productComparator($product1, $product2) {
+        return strcmp($product1["title"], $product2["title"]);
     }
 
     /**
