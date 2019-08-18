@@ -35,21 +35,30 @@ body {
 .nav-top {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .nav-bottom {
+  width: 100%;
+}
 
+.nav-top-cart {
+  display: flex;
 }
 
 .nav-bottom .nav-item {
-  color: var(--iconGray) !important;
+  font-size: 0.7rem;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  padding-right: 1.5rem;
 }
 
-.nav-bottom .nav-sale {
-  color: var(--redColor) !important;
+.nav-bottom .nav-item .nav-link {
+  color: var(--iconGray);
+}
+
+.nav-bottom .nav-sale .nav-link {
+  color: var(--redColor);
 }
 
 .brand-logo {
@@ -62,10 +71,10 @@ body {
 }
 
 .black-bar {
-  height: 0.4rem;
-  width: 103%;
+  height: 0.3rem;
+  width: 102%;
   background-color: var(--fullBlack);
- 
+  margin-left: -0.8rem;
 }
 
 
@@ -76,6 +85,27 @@ body {
   border: 0.05rem solid var(--footerGray);
   border-radius: 0.2rem;
   top: 1rem;
+  height: 2rem;
+  align-self: center;
+  padding: 1rem 0.5rem;
+}
+
+.cart-icon {
+  margin-right: 0.5rem;
+  height: 0.7rem;
+  color: var(--iconGray);
+}
+
+.cart-desc {
+  font-size: 0.7rem;
+  height: 0.1rem;
+  font-weight: bold;
+  color: var(--iconGray);
+}
+
+.cart-desc .cart-total-amount {
+  margin-left: 0.5rem;
+  color: var(--fullBlack);
 }
 
 
@@ -196,12 +226,23 @@ body {
     left: 0.5rem;
   }
 
+  .toggler-button {
+    background-color: var(--footerGray);
+    height: 2rem;
+    widows: 2rem;
+  }
+
   .cart {
     height: 2rem;
     width: 2rem;
     background-color: var(--footerGray);
     justify-content: center;
   }
+
+  .cart .cart-desc {
+    display: none;
+  }
+
 }
 
 

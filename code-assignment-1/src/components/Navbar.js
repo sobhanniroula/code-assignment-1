@@ -16,7 +16,7 @@ export default class Navbar extends Component {
                             </div>
                             <div className="nav-top-cart">
                                 <Cart />
-                                <button className="navbar-toggler ml-auto hidden-sm-up float-xs-right bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                                <button className="navbar-toggler ml-auto hidden-sm-up float-xs-right toggler-button" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                                     <span className="navbar-toggler-icon"></span>
                                 </button>
                             </div>
