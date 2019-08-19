@@ -11,13 +11,6 @@ export class ProductList extends Component {
         };
     }
 
-    componentDidMount() {
-        // this.state.products.map((item, i) => {
-        //     this.setState({
-        //         products: item.title
-        //     })
-        // })
-    }
 
     render() {
         return (
