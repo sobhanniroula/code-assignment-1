@@ -12,11 +12,13 @@ export default class App extends Component {
   render() {
     return (
       <React.Fragment>
+
         <TopBar />
         <Navbar />
         <VaimoAd />
         <ProductList />       
         <Footer />
+        
       </React.Fragment>
     );
   }
