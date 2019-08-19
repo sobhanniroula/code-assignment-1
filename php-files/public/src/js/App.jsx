@@ -18,7 +18,6 @@ export default class App extends Component {
         <ProductList />       
         <Footer />
       </React.Fragment>
-      
-    )
+    );
   }
 }

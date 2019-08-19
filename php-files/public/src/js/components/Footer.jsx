@@ -17,6 +17,7 @@ export default class Footer extends Component {
     }
 
     submitEmail(event) {
+        event.preventDefault();
         this.validateEmail();
         this.setState({email: ""});
 

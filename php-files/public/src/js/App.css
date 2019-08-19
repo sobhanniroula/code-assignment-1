@@ -108,8 +108,12 @@ body {
 }
 
 .cart:hover .cart-hover {
-    display: block;
-    cursor: pointer;
+  display: block;
+  cursor: pointer;
+}
+
+.cart:active .cart-hover {
+  display: none;
 }
 
 .cart-hover .cart-item img {
