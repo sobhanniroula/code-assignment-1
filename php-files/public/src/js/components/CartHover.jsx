@@ -6,9 +6,6 @@ export default class CartHover extends Component {
 
         this.state = {
             items: [],
-            title: "",
-            image: "",
-            price: 0,
             count: 1
         }
     }
@@ -18,27 +15,15 @@ export default class CartHover extends Component {
             .then(response => {
             return response.json();
         }).then((data) => {
-            console.log(data);
             this.setState({
                 items: data.items
             });
         }).catch((e) => console.log(e))
-        // .then(data => {
-        //     setTimeout(() => {
-        //         console.log(data);
-        //         this.setState({
-        //             items: data
-        //         });
-        //     }, 60000)
-        // }).catch((e) => {
-        //     console.log(e);
-        // })
     }
 
     
     render() {
         const { items, count } = this.state;
-        console.log(items);
 
         return (
             <div className="cart-hover">

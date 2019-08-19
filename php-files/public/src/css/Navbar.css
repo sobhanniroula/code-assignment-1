@@ -1,0 +1,130 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-top-cart {
+  display: flex;
+}
+
+.nav-bottom .nav-item {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0px 0px;
+  width: 7rem;
+  text-align: center;
+}
+
+.my-account {
+  width: 10rem;
+  margin-left: -1rem;
+}
+
+.nav-bottom .nav-item:hover {
+  box-sizing: border-box;
+  background-color: var(--fullBlack);
+  border-bottom: 0.25rem solid var(--mainGreen);
+  line-height: 0.95rem;
+}
+
+.nav-bottom .nav-item:hover .nav-link {
+  color: var(--mainWhite);
+}
+
+.nav-bottom .dropdown .dropdown-menu {
+  background-color: var(--halfGray);
+  min-width: 7rem;
+  border-radius: 0;
+}
+
+.dropdown-item {
+  font-size: 0.75rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.dropdown-item:hover {
+  background-color: var(--footerGray);
+}
+
+.navbar-nav li:hover > ul.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu {
+  position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top:0;
+  left:100%;
+  margin-top:-6px;
+}
+
+.dropdown-menu > li > a:after {
+  text-decoration: underline;
+  transform: rotate(-90deg);
+} 
+
+.nav-bottom .nav-item .nav-link {
+  color: var(--iconGray);
+}
+
+.nav-bottom > ul > li > a::after {
+  display: none;
+}
+
+.nav-bottom .nav-sale .nav-link {
+  color: var(--redColor);
+}
+
+.brand-logo {
+  height: 4rem;
+}
+
+.ul-bottom-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.black-bar {
+  height: 0.3rem;
+  width: 102%;
+  background-color: var(--fullBlack);
+  margin-left: -1.1rem;
+}
+
+
+
+/* for small screens  */
+@media all and (max-width: 480px) {
+  .brand-logo {
+    height: 2rem;
+  }
+
+  .toggler-button {
+    background-color: var(--footerGray);
+    height: 2rem;
+    widows: 2rem;
+  }
+}
+
+
+/* for big screens  */
+@media all and (min-width: 940px) {
+  
+}

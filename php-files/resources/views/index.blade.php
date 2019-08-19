@@ -6,9 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-        <link rel="stylesheet" href="/src/index.css" />
-        <link rel="stylesheet" href="/src/js/App.css" />
-        <link rel="stylesheet" href="/src/js/components/Navbar.css" />
+        <link rel="stylesheet" href="/src/css/index.css" />
+        <link rel="stylesheet" href="/src/css/App.css" />
+        <link rel="stylesheet" href="/src/css/Navbar.css" />
 
         <script>
             var allProducts = <?php echo json_encode($products); ?>;

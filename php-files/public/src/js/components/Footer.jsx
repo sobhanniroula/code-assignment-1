@@ -107,8 +107,8 @@ export default class Footer extends Component {
                                 <button className="btn btn-subscribe" type="submit" onClick = {this.submitEmail.bind(this)} >Subscribe</button>                                
 	                        </div>
                             <div className="subscription-validate">
-                                    {subsValidate}
-                                    {statusString}                     
+                                {subsValidate}
+                                {statusString}                     
                             </div>
                         </div>
                     </div>
