@@ -4,8 +4,9 @@
   --footerGray: #b6c2c9;
   --iconGray: #4c565f;
   --captionBlack: #71706e;
-  --redColor: #f00;
+  --redColor: rgb(194, 11, 11);
   --fullBlack: #000;
+  --fullGreen: rgb(6, 124, 6);
 }
 
 html{
@@ -238,6 +239,33 @@ body {
   line-height: 1rem;
   font-weight: 500;
   border: none;
+}
+
+.subscription-validate {
+  display: none;
+  height: 2rem;
+  width: 20rem;
+  margin-top: 0.5rem;
+  margin-left: -7rem;
+  font-size: 0.8rem;
+  text-transform: none;
+}
+
+.subscription-validate img {
+  height: 1rem;
+  width: 1rem;
+}
+
+.subscription-validate .loading {
+  color: var(--mainWhite);
+}
+
+.subscription-validate .status-success {
+  color: var(--fullGreen);
+}
+
+.subscription-validate .status-failed {
+  color: var(--redColor);
 }
 
 
