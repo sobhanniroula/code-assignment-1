@@ -21,7 +21,7 @@ export class ProductList extends Component {
                     </div>
 
                     <div className="all-products">
-                        <ul>
+                    
                         {this.state.products.map((item) => {
                            return (
                                <Product 
@@ -31,8 +31,7 @@ export class ProductList extends Component {
                                />
                            ); 
                         })} 
-                        </ul>
-                      
+                
                     </div>
                 </div>
             </div>
