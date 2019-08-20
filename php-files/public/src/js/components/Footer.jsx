@@ -28,7 +28,7 @@ export default class Footer extends Component {
     validateEmail() {
         this.setState({ isLoading: true });
         const email = this.state.email;
-        fetch(`/newsletter/subscribe?email=${email}`, {
+        fetch(`newsletter/subscribe?email=${email}`, {
             method: "GET",
             headers: {
                 'Accept': 'application/json',
@@ -57,7 +57,7 @@ export default class Footer extends Component {
         if(isLoading) { 
             subsValidate =
                     (<div className="loading">
-                        <img src="/img/spinner.svg" alt="spinner"/>
+                        <img src="img/spinner.svg" alt="spinner"/>
                         <em> Subscribing to newsletter...</em>
                     </div>);
         }

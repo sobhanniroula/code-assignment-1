@@ -13,8 +13,8 @@ export default class Navbar extends Component {
 
                   <div className="nav-top">
                     <div className="nav-top-logo">
-                        <a className="navbar-brand" href="/">
-                            <img src="/img/logo.png" alt="Brand" className="brand-logo" />
+                        <a className="navbar-brand" href="#">
+                            <img src="img/logo.png" alt="Brand" className="brand-logo" />
                         </a>
                     </div>
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ls from 'local-storage';
 import CartHover from './CartHover.jsx';
 
 
@@ -14,16 +15,41 @@ export default class Cart extends Component {
     }
 
     componentDidMount() {
-        fetch('/cart/get')
+        let items, totalItems, totalPrice, lastSavedTime, timeNow; 
+        items = localStorage.getItem('items');
+        totalItems = localStorage.getItem('totalItems');
+        totalPrice = localStorage.getItem('totalPrice');
+        lastSavedTime = localStorage.getItem('lastSavedTime');
+        timeNow = new Date().getTime();
+
+        if (lastSavedTime && timeNow - lastSavedTime < 60000) {
+            if (items && totalItems && totalPrice) {
+                items = JSON.parse(items);
+                totalItems = JSON.parse(totalItems);
+                totalPrice = JSON.parse(totalPrice);
+                this.setState({
+                    items,
+                    totalItems,
+                    totalPrice
+                });
+            }
+        }else {
+        fetch('cart/get')
             .then(response => {
-            return response.json();
-        }).then((data) => {
-            this.setState({
-                items: data.items,
-                totalItems: data.totalItems,
-                totalPrice: data.totalPrice
-            });
-        }).catch((e) => console.log(e))
+            return response.json()
+            }).then((data) => {
+                console.log(data);
+                this.setState({
+                    items: data.items,
+                    totalItems: data.totalItems,
+                    totalPrice: data.totalPrice
+                });
+                localStorage.setItem('items', JSON.stringify(data.items));
+                localStorage.setItem('totalItems', JSON.stringify(data.totalItems));
+                localStorage.setItem('totalPrice', JSON.stringify(data.totalPrice));
+                localStorage.setItem('lastSavedTime', new Date().getTime());
+            }).catch((e) => console.log(e));
+        }
     }
 
 

@@ -351,6 +351,16 @@ body {
     display: none;
   }
 
+  .cart-hover {
+    width: 99vw;
+    right: -5.6rem;
+    border: none;
+  }
+
+  .checkout-btn-div .btn-subscribe {
+    font-size: 0.8rem;
+  }
+
   .black-bar {
     display: none;
   }
@@ -408,6 +418,10 @@ body {
 
   .subs-icon {
     left: 0.5rem;
+  }
+
+  .subscription-validate {
+    margin-left: 7rem;
   }
 }
 

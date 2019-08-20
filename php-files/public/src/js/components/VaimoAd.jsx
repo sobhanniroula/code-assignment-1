@@ -7,7 +7,7 @@ export default class VaimoAd extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <img src="/img/get-ready.jpg" alt="Winter" className="get-ready-img"/>
+                            <img src="img/get-ready.jpg" alt="Winter" className="get-ready-img"/>
                         </div>
                         <div className="col-md-6 vaimo-ad-desc">
                             <h1>This is Vaimo Store</h1>
