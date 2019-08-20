@@ -11,7 +11,6 @@
 
 .nav-bottom {
   display: flex;
-  justify-content: space-between;
   width: 100%;
 }
 
@@ -35,17 +34,9 @@
 
 .nav-bottom .nav-item:hover {
   box-sizing: border-box;
-  background-color: var(--fullBlack);
-  border-bottom: 0.25rem solid var(--mainGreen);
-  line-height: 0.95rem;
-}
-
-.nav-bottom .nav-item:hover .nav-link {
-  color: var(--mainWhite);
 }
 
 .nav-bottom .dropdown .dropdown-menu {
-  background-color: var(--halfGray);
   min-width: 7rem;
   border-radius: 0;
 }
@@ -59,10 +50,6 @@
   background-color: transparent;
 }
 
-.dropdown-item:hover {
-  background-color: var(--footerGray);
-}
-
 .navbar-nav li:hover > ul.dropdown-menu {
   display: block;
 }
@@ -74,11 +61,6 @@
   left:100%;
   margin-top:-6px;
 }
-
-.dropdown-menu > li > a:after {
-  text-decoration: underline;
-  transform: rotate(-90deg);
-} 
 
 .nav-bottom .nav-item .nav-link {
   color: var(--iconGray);
@@ -114,6 +96,7 @@
 @media all and (max-width: 480px) {
   .brand-logo {
     height: 2rem;
+    margin-left: -1rem;
   }
 
   .toggler-button {
@@ -121,10 +104,80 @@
     height: 2rem;
     widows: 2rem;
   }
+
+  .nav-bottom {
+    flex-wrap: wrap;
+    margin-left: -3.5rem;
+  }
+
+  .ul-bottom-nav, .nav-link, .dropdown-menu, .dropdown-item {
+    width: 99vw;
+  }
+
+  .nav-link, .dropdown-menu, .dropdown-item {
+    border-bottom: 0.03rem solid var(--footerGray);
+  }
+
+  .nav-bottom .nav-item .nav-link {
+    text-align: left;
+    padding-left: 1rem;
+  }
+
+  .nav-bottom .dropdown .dropdown-menu {
+    border: none;
+  }
+
+  .nav-bottom .dropdown .dropdown-menu > li > ul > li > a {
+    padding-left: 3rem;
+  }
+
+  .dropdown-item {
+    font-size: 0.78rem;
+    font-weight: bold;
+  }
+
+  .dropdown-item:hover {
+    background-color: transparent;
+  }
+
+  
+  .dropdown-menu > li > a:after {
+    display: none;
+  } 
+
+  .my-account {
+    margin-top: 0rem;
+    margin-left: 0rem;
+  }
 }
 
 
 /* for big screens  */
-@media all and (min-width: 940px) {
-  
+@media all and (min-width: 480px) {
+  .nav-bottom {
+    justify-content: space-between;
+  }
+
+  .nav-bottom .nav-item:hover {
+    background-color: var(--fullBlack);
+    border-bottom: 0.25rem solid var(--mainGreen);
+    line-height: 0.95rem;
+  }
+
+  .nav-bottom .nav-item:hover .nav-link {
+    color: var(--mainWhite);
+  }
+
+  .nav-bottom .dropdown .dropdown-menu {
+    background-color: var(--halfGray);
+  }
+
+  .dropdown-item:hover {
+    background-color: var(--footerGray);
+  }
+
+  .dropdown-menu > li > a:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+  }
 }
