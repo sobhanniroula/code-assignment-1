@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ls from 'local-storage';
 import CartHover from './CartHover.jsx';
 
 

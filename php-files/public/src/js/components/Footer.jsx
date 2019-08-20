@@ -9,7 +9,6 @@ export default class Footer extends Component {
             isValidated: false,
             status: ""
         };
-
     }
 
     handleChange(event) {
@@ -17,12 +16,14 @@ export default class Footer extends Component {
     }
 
     submitEmail(event) {
+        const subsDiv = document.querySelector('.subscription-validate');
+
         event.preventDefault();
         this.validateEmail();
-        this.setState({email: ""});
-
-        const makeBlock = document.querySelector('.subscription-validate');
-        makeBlock.style.display = "block";
+        this.setState({ 
+            email: "" 
+        });
+        subsDiv.style.display = "block";
     }
 
     validateEmail() {
@@ -49,17 +50,19 @@ export default class Footer extends Component {
         })
     }
 
+    
     render() {
 
         const { isLoading, status } = this.state;
         let subsValidate, statusString;
 
         if(isLoading) { 
-            subsValidate =
-                    (<div className="loading">
-                        <img src="img/spinner.svg" alt="spinner"/>
-                        <em> Subscribing to newsletter...</em>
-                    </div>);
+            subsValidate = (
+                <div className="loading">
+                    <img src="img/spinner.svg" alt="spinner"/>
+                    <em> Subscribing to newsletter...</em>
+                </div>
+            );                    
         }
         
         if(status === "success") {
