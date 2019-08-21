@@ -52,9 +52,8 @@ export default class Footer extends Component {
 
     
     render() {
-
         const { isLoading, status } = this.state;
-        let subsValidate, statusString;
+        let subsValidate, statusString;  
 
         if(isLoading) { 
             subsValidate = (
@@ -62,22 +61,23 @@ export default class Footer extends Component {
                     <img src="img/spinner.svg" alt="spinner"/>
                     <em> Subscribing to newsletter...</em>
                 </div>
-            );                    
+            ); 
         }
         
         if(status === "success") {
-            statusString = (
-                <div className="status-success">
+            statusString = (        
+                <div className="status-string status-success">
                     <p><i class="fas fa-check"></i><em> Subscription successful.</em></p>
                 </div> 
             );
-        } else if(status === "failed") {
+        } else if(status === "failed") {   
             statusString = (
-                <div className="status-failed">
+                <div className="status-string status-failed">
                     <p><i class="fas fa-exclamation-triangle"></i><em> Email verfication failed...</em></p>
                 </div>
             );
         }
+    
         
 
         return (
@@ -111,7 +111,7 @@ export default class Footer extends Component {
 	                        </div>
                             <div className="subscription-validate">
                                 {subsValidate}
-                                {statusString}                     
+                                {statusString}         
                             </div>
                         </div>
                     </div>
